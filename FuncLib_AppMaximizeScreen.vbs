@@ -7,15 +7,12 @@ Function AppMaximizeScreen(objParent)
         'Create object
         Set objWindow = eval(objParent)
         'Check for non-empty strings
-        If strObj <> " " Then
-            If objWindow.Exist(20) Then  
-				ObjWindow.Maximize
-				AppMaximizeScreen=True
+        If objWindow.Exist(20) Then  
+		    ObjWindow.Maximize
+			AppMaximizeScreen=True
 				Exit Function
-            End If
-            AppMaximizeScreen = "objParent does not exist"
-            Exit Function
         End If
+        
         AppMaximizeScreen = "strObj String is empty"
         Exit Function
     End If
